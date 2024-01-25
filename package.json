@@ -1,12 +1,16 @@
 {
   "name": "my-first-strapi",
-  "private": true,
   "version": "0.1.0",
+  "private": true,
   "description": "A Strapi application",
+  "license": "MIT",
+  "author": {
+    "name": "A Strapi developer"
+  },
   "scripts": {
+    "build": "strapi build",
     "develop": "strapi develop",
     "start": "strapi start",
-    "build": "strapi build",
     "strapi": "strapi"
   },
   "dependencies": {
@@ -22,15 +26,11 @@
     "strapi-plugin-vercel-deploy": "^1.4.0",
     "styled-components": "5.3.3"
   },
-  "author": {
-    "name": "A Strapi developer"
+  "engines": {
+    "node": ">=18.0.0 <=20.x.x",
+    "npm": ">=10.0.0"
   },
   "strapi": {
     "uuid": "7dec1f9d-9f95-4587-8bcb-5d10d55e0db4"
-  },
-  "engines": {
-    "node": ">=18.0.0 <=20.x.x",
-    "npm": ">=6.0.0"
-  },
-  "license": "MIT"
+  }
 }
