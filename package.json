@@ -10,6 +10,7 @@
   "scripts": {
     "build": "strapi build",
     "develop": "strapi develop",
+    "postinstall": "npm install -g npm@latest",
     "start": "strapi start",
     "strapi": "strapi"
   },
