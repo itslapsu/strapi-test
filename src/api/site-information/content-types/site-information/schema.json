@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "site_informations",
+  "info": {
+    "singularName": "site-information",
+    "pluralName": "site-informations",
+    "displayName": "Site Information",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "fileCV": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "files"
+      ]
+    },
+    "telegramLink": {
+      "type": "string",
+      "required": true,
+      "default": "https://t.me/slaptashka"
+    }
+  }
+}

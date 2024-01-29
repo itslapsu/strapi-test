@@ -33,6 +33,12 @@
       "allowedTypes": [
         "images"
       ]
+    },
+    "demoLink": {
+      "type": "string"
+    },
+    "githubLink": {
+      "type": "string"
     }
   }
 }
