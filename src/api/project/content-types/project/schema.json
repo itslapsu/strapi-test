@@ -4,7 +4,7 @@
   "info": {
     "singularName": "project",
     "pluralName": "projects",
-    "displayName": "Projects",
+    "displayName": "Project",
     "description": ""
   },
   "options": {
@@ -19,6 +19,12 @@
     "body": {
       "type": "text",
       "required": true
+    },
+    "tags": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::tag.tag",
+      "mappedBy": "projects"
     },
     "image": {
       "type": "media",
