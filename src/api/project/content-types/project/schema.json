@@ -39,6 +39,9 @@
     },
     "githubLink": {
       "type": "string"
+    },
+    "slug": {
+      "type": "string"
     }
   }
 }
