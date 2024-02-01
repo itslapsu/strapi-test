@@ -842,7 +842,7 @@ export interface ApiProjectProject extends Schema.CollectionType {
     image: Attribute.Media & Attribute.Required;
     demoLink: Attribute.String;
     githubLink: Attribute.String;
-    slug: Attribute.String;
+    slug: Attribute.String & Attribute.Required;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
