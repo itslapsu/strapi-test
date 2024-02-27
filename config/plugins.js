@@ -13,4 +13,7 @@ module.exports = () => ({
   "random-sort": {
     enabled: true,
   },
+  ckeditor: {
+    enabled: true,
+  },
 });
