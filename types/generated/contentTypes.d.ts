@@ -829,13 +829,12 @@ export interface ApiAboutSectionAboutSection extends Schema.SingleType {
     description: '';
   };
   options: {
-    draftAndPublish: true;
+    draftAndPublish: false;
   };
   attributes: {
     body: Attribute.RichText;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
-    publishedAt: Attribute.DateTime;
     createdBy: Attribute.Relation<
       'api::about-section.about-section',
       'oneToOne',
@@ -844,6 +843,42 @@ export interface ApiAboutSectionAboutSection extends Schema.SingleType {
       Attribute.Private;
     updatedBy: Attribute.Relation<
       'api::about-section.about-section',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
+export interface ApiExperienceExperience extends Schema.CollectionType {
+  collectionName: 'experiences';
+  info: {
+    singularName: 'experience';
+    pluralName: 'experiences';
+    displayName: 'Experience';
+    description: '';
+  };
+  options: {
+    draftAndPublish: false;
+  };
+  attributes: {
+    title: Attribute.String & Attribute.Required;
+    body: Attribute.Text & Attribute.Required;
+    startDate: Attribute.Date & Attribute.Required;
+    untilNow: Attribute.Boolean;
+    endDate: Attribute.Date;
+    company: Attribute.String & Attribute.Required;
+    companyLink: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::experience.experience',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::experience.experience',
       'oneToOne',
       'admin::user'
     > &
@@ -973,6 +1008,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.role': PluginUsersPermissionsRole;
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'api::about-section.about-section': ApiAboutSectionAboutSection;
+      'api::experience.experience': ApiExperienceExperience;
       'api::project.project': ApiProjectProject;
       'api::site-information.site-information': ApiSiteInformationSiteInformation;
       'api::tag.tag': ApiTagTag;
