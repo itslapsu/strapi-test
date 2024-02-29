@@ -16,10 +16,6 @@
       "type": "string",
       "required": true
     },
-    "body": {
-      "type": "text",
-      "required": true
-    },
     "startDate": {
       "type": "date",
       "required": true
@@ -36,6 +32,10 @@
     },
     "companyLink": {
       "type": "string"
+    },
+    "body": {
+      "type": "richtext",
+      "required": true
     }
   }
 }
